@@ -1,0 +1,25 @@
+{
+    "name": "Super Cart",
+    "version": "0.1.0",
+    "description": "Recieves data from e-commerce sites and aggregates them into onr DB.",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.vanilla-js-shoping-cart-tutorial-ido.netlify.app/*"],
+    "icons": {
+      "16": "Graphics/Shopping_Cart_Icon.png",
+      "32": "Graphics/Shopping_Cart_Icon.png",
+      "48": "Graphics/Shopping_Cart_Icon.png",
+      "128":"Graphics/Shopping_Cart_Icon.png"
+    },  
+    "background": {
+      "service_worker": "background.js"
+    },
+    "manifest_version": 3,
+    "content_scripts": [
+      {
+        "matches": ["https://*.vanilla-js-shoping-cart-tutorial-ido.netlify.app/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+    
+}
+
