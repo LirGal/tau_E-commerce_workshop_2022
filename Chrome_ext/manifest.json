@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "description": "Recieves data from e-commerce sites and aggregates them into onr DB.",
     "permissions": ["storage", "tabs"],
-    "host_permissions": ["https://*.vanilla-js-shoping-cart-tutorial-ido.netlify.app/*"],
+    "host_permissions": ["https://*.vanilla-js-shoping-cart-tutorial-ido.netlify.app/*", "https://smart-e-cart-workshop-shopping-1.netlify.app/"],
     "icons": {
       "16": "Graphics/Shopping_Cart_Icon.png",
       "32": "Graphics/Shopping_Cart_Icon.png",
@@ -16,7 +16,7 @@
     "manifest_version": 3,
     "content_scripts": [
       {
-        "matches": ["https://*.vanilla-js-shoping-cart-tutorial-ido.netlify.app/*"],
+        "matches": ["https://*.vanilla-js-shoping-cart-tutorial-ido.netlify.app/*", "https://smart-e-cart-workshop-shopping-1.netlify.app/"],
         "js": ["contentScript.js"]
       }
     ]

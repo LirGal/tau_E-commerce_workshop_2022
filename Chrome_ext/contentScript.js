@@ -1,53 +1,41 @@
-
-
-
-const add_2_cart_btns = document.getElementsByClassName("cart-content");
-
-const add_counter = 0;
-const rm_counter = 0;
-
-function cart_change_handler(mutationList) {
-  
-
-  if (mutationList.addedNodes.length > 0){
-    console.log("a node added" + str(mutationList.addedNodes[0]))
-  }
-
-  console.log(mutationList); // debug - delete this
-
-  // if item added
-
-  // if item changed amount (also check amount == 0)
-
-  // if item removed
-
-  
-}
+// this is the global dictionary that will hold all the values.
+var CART_DICT = {};
 
 // add observer for the cart
-let observer = new MutationObserver(cart_change_handler);
-const cart = document.getElementsByClassName("cart-content")[0]
-observer.observe(cart, {subtree: true, childList: true});
+let cart_observer = new MutationObserver(cart_change_handler);
+var cart = document.getElementsByClassName("cart-content")[0]
+cart_observer.observe(cart, {subtree: true, childList: true});
 
+var clear_cart = document.getElementsByClassName("clear-cart banner-btn")[0];
+clear_cart.addEventListener("click", clear_cart_handler);
 
+// count the changes in the cart to do calculations
+function cart_change_handler(mutationRecList) {
+  create_cart_dict(mutationRecList);
+  return true; // elimate server error
+}
 
+// deleting the cart when the user clears it
+function clear_cart_handler(mutationRecList) {
+  CART_DICT = {};
+  console.log("CART CLEARED");
+  return true;
+}
 
+// re-read the cart json and update the global cart_dict
+function create_cart_dict() {
+  
+  for (const item of Array.from(document.getElementsByClassName("cart-item"))) {
 
+    item_name   = item.querySelector("h4").innerHTML;
+    item_price  = item.querySelector("h5").innerHTML;
+    item_amount = item.querySelector("p").innerHTML;
 
-// btn.addEventListener("change", add2Cart, false)
+    CART_DICT[item_name] = {price:item_price, amount:item_amount };
 
-
-// add_2_cart_butt.addEventListener("click", borat2log, false);
-
-
-
-function add2Cart(event) {
-  add_counter++;
-  console.log("\n added item number " + add_counter.toString() + " to cart\n");
+    console.log("CART_DICT");
+    console.log(CART_DICT)
+  }
 }
 
 
-function rmFromCart() {
-  rm_counter++;
-  console.log("\n removed item number " + rm_counter.toString() + " from cart\n");
-}
