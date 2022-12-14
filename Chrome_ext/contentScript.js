@@ -1,53 +1,56 @@
-
-
-
-const add_2_cart_btns = document.getElementsByClassName("cart-content");
-
-const add_counter = 0;
-const rm_counter = 0;
-
-function cart_change_handler(mutationList) {
-  
-
-  if (mutationList.addedNodes.length > 0){
-    console.log("a node added" + str(mutationList.addedNodes[0]))
-  }
-
-  console.log(mutationList); // debug - delete this
-
-  // if item added
-
-  // if item changed amount (also check amount == 0)
-
-  // if item removed
-
-  
-}
+const CART_DICT = "CART_DICT";
 
 // add observer for the cart
-let observer = new MutationObserver(cart_change_handler);
-const cart = document.getElementsByClassName("cart-content")[0]
-observer.observe(cart, {subtree: true, childList: true});
+let cart_observer = new MutationObserver(cart_change_handler);
+var cart = document.getElementsByClassName("cart-content")[0]
+cart_observer.observe(cart, {subtree: true, childList: true});
 
+var clear_cart = document.getElementsByClassName("clear-cart banner-btn")[0];
+clear_cart.addEventListener("click", clear_cart_handler);
 
+// This function is triggerd when there is a change in the cart (except clear)
+function cart_change_handler(mutationRecList) {
+  temp_dict = create_cart_dict(mutationRecList);
 
-
-
-
-// btn.addEventListener("change", add2Cart, false)
-
-
-// add_2_cart_butt.addEventListener("click", borat2log, false);
-
-
-
-function add2Cart(event) {
-  add_counter++;
-  console.log("\n added item number " + add_counter.toString() + " to cart\n");
+  chrome.storage.local.get([CART_DICT]).then((result) => {
+    update_cart_dict(temp_dict, result.CART_DICT);
+    console.log("CART_DICT");
+    console.log(result.CART_DICT);
+  });
+  return true; // elimate server error
 }
 
+// deleting the cart when the user clears it
+// TODO - this does nothing so far, we need to work on deleting items from only one website.
+// TODO - currently "clear" clears global func, only works in "comfy house" website
+function clear_cart_handler(mutationRecList) {
+  // background.CART_DICT = {}; -> cannot uset this because it clears all the carts
+  console.log("CART CLEARED"); // TODO - delete this line afer imp.
+  chrome.storage.local.set({ CART_DICT: {} }, function(){}); // set global dict to empty
+  return true;
+}
 
-function rmFromCart() {
-  rm_counter++;
-  console.log("\n removed item number " + rm_counter.toString() + " from cart\n");
+// re-read the cart json and update the global cart_dict
+// TODO - create a way to figure out which website the item is coming from
+function create_cart_dict() {
+  
+  var temp_CART_DICT = {};
+  for (const item of Array.from(document.getElementsByClassName("cart-item"))) {
+
+    item_name   = item.querySelector("h4").innerHTML;
+    item_price  = item.querySelector("h5").innerHTML;
+    item_amount = item.querySelector("p").innerHTML;
+    temp_CART_DICT[item_name] = {price:item_price, amount:item_amount };
+
+  }
+  return temp_CART_DICT;
+}
+
+function update_cart_dict(temp_dict, global_dict) {
+
+  for (const [key, value] of Object.entries(temp_dict)) {
+    global_dict[key] = value;
+  }
+
+  chrome.storage.local.set({ CART_DICT: global_dict }, function(){});
 }
