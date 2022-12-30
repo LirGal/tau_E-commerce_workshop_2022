@@ -13,6 +13,7 @@
     "background": {
       "service_worker": "background.js"
     },
+    "action": {},
     "manifest_version": 3,
     "content_scripts": [
       {
