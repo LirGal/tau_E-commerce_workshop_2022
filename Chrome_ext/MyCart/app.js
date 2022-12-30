@@ -1,7 +1,3 @@
-const client = contentful.createClient({
-  space: '3zuj37dbjeca',
-  accessToken: '_lVQC1gsGTtME1jjQWiVVyGiHIN4bxUgxVMOdkG3C2Q',
-});
 
 // variables
 
@@ -246,6 +242,16 @@ class Storage {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+
+  chrome.storage.local.get(["CART_DICT"]).then((result) => {
+    console.log(result.CART_DICT);
+    setup_ui(result.CART_DICT)
+  });
+});
+
+async function setup_ui(global_cart)
+{
+  console.log(global_cart);
   const ui = new UI();
   const products = new Products();
   console.log("START!!!");
@@ -279,4 +285,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     ui.getBagButtons();
     ui.cartLogic();
   });
-});
+}
