@@ -187,7 +187,7 @@ body {
 
 /* --------------- End of Cart ---------------- */
 
-ul {
+tr {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -197,11 +197,11 @@ ul {
   border-radius: 8%;
 }
 
-li {
+td {
   float: left;
 }
 
-li a, .dropbtn {
+td a, .dropbtn {
   display: inline-block;
   color: white;
   text-align: center;
@@ -209,11 +209,11 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+td a:hover, .dropdown:hover .dropbtn {
   background-color: rgb(102, 101, 101);
 }
 
-li.dropdown {
+td.dropdown {
   display: inline-block;
 }
 
