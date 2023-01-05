@@ -13,7 +13,9 @@
     "background": {
       "service_worker": "background.js"
     },
-    "action": {},
+    "action": {
+      "default_title": "Click on the icon to enjoy shopping with SuperCart!"
+    },
     "manifest_version": 3,
     "content_scripts": [
       {

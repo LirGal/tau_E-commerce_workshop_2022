@@ -24,10 +24,12 @@ function cart_change_handler(mutationRecList) {
 
   chrome.storage.local.get([CART_DICT]).then((result) => {
     update_cart_dict(temp_dict, result.CART_DICT);
-    console.log("CART_DICT");
-    console.log(result.CART_DICT);
+    console.log("CART_DICT"); // debug
+    console.log(result.CART_DICT); // debug
     return true;
   });
+
+  refresh_ui();
   return true; // elimate server error
 }
 
@@ -41,6 +43,8 @@ function clear_cart_handler(mutationRecList) {
     update_cart_dict(update_CART_DICT, result.CART_DICT);
     return true;
   });
+  
+  refresh_ui();
   return true;
 }
 
@@ -66,4 +70,10 @@ function update_cart_dict(temp_dict, global_dict) {
   }
   
   chrome.storage.local.set({ CART_DICT: global_dict }, function(){});
+}
+
+function refresh_ui(){
+  (async () => {
+    const response = await chrome.runtime.sendMessage({refresh_ui_tab: "true"});
+  })();
 }
