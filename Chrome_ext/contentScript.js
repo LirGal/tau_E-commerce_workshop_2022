@@ -1,7 +1,14 @@
 // maps: url->item->details
 // example: CART_DICT[https...website1..][red shirt] == {color:"red", size:"large"....}
 const CART_DICT = "CART_DICT";
-chrome.storage.local.set({ CART_DICT: {} }, function(){});
+
+// initializing memory when first entering one of the websites.
+var CART_INIT = false;
+if ( !CART_INIT) {
+  chrome.storage.local.set({ CART_DICT: {} }, function(){});
+  CART_INIT = true;
+}
+
 
 // add observer for the cart
 let cart_observer = new MutationObserver(cart_change_handler);
