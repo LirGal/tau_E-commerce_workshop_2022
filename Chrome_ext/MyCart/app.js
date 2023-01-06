@@ -75,7 +75,6 @@ class UI {
   }
 
   initializeCategoriesDropdown() {
-    var counter = 0;
     var a;
     for(const category of categories) {
       a = document.createElement("a");
@@ -83,7 +82,6 @@ class UI {
       a.href = "#";
       a.innerHTML = category;
       categoriesDropdown.appendChild(a);
-      counter++;
     }
   }
 
@@ -146,6 +144,22 @@ class UI {
   }
 
   showGroupedList(groupedList, div) {
+    if(groupedList.length > 0) {
+      if(div.classList.contains("duplicates")) {
+        div.innerHTML = "<h2>These items might be duplicate</h2>";
+      }
+      else if(div.classList.contains("similarities")) {
+        div.innerHTML = "<h2>These items might be similar</h2>";
+      }
+    }
+    else {
+      if(div.classList.contains("duplicates")) {
+        div.innerHTML = "<h2>No duplicates</h2>";
+      }
+      else if(div.classList.contains("similarities")) {
+        div.innerHTML = "<h2>No similarities</h2>";
+      }
+    }
     var groupDiv;
     var itemDiv;
     for(const group of groupedList) {
@@ -175,13 +189,13 @@ class UI {
     if(duplicates.style.display == NONE) {
       duplicates.style.display = BLOCK;
       findDuplicatesBtn.innerHTML = "<b>" + FIND_DUPLICATES_TEXT + "</b>";
+      var groupedDuplicates = findDuplicates(cart);  // function declared in analytics.js
+      this.showGroupedList(groupedDuplicates, duplicates);
     }
     else {
       duplicates.style.display = NONE;
       findDuplicatesBtn.innerHTML = FIND_DUPLICATES_TEXT;
     }
-    var groupedDuplicates = findDuplicates(cart);  // function declared in analytics.js
-    this.showGroupedList(groupedDuplicates, duplicates);
   }
 
   findSimilarities(cart) {
@@ -190,13 +204,13 @@ class UI {
     if(similarities.style.display == NONE) {
       similarities.style.display = BLOCK;
       findSimilaritiesBtn.innerHTML = "<b>" + FIND_SIMILARITIES_TEXT + "</b>";
+      var groupedSimilarities = findSimilarities(cart);  // function declared in analytics.js
+      this.showGroupedList(groupedSimilarities, similarities);
     }
     else {
       similarities.style.display = NONE;
       findSimilaritiesBtn.innerHTML = FIND_SIMILARITIES_TEXT;
     }
-    var groupedSimilarities = findSimilarities(cart);  // function declared in analytics.js
-    this.showGroupedList(groupedSimilarities, similarities);
   }
 
   setupAPP(cart) {

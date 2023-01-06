@@ -7,7 +7,7 @@ const CATEGORIES = "categories";
 const TITLE = "title";
 const WEBSITE = "website";
 
-const THRESHOLD = 11/48;
+const THRESHOLD = 1/2;
 
 const specialCharacters = [/&quot;/g, /&amp;/g, /&lt;/g, /&gt;/g, /&nbsp;/g, /[^a-zA-Z0-9\- ]/g];
 
@@ -101,7 +101,7 @@ function findDuplicates(cartItems) {
     for(var i = 0; i < sorted.length-1; i++) {
         if(compareID(sorted[i], sorted[i+1]) == 0) {
             groupedDuplicates.push([]);
-            while(i < sorted.length && compareID(sorted[i], sorted[i+1]) == 0) {
+            while(i < sorted.length-1 && compareID(sorted[i], sorted[i+1]) == 0) {
                 groupedDuplicates[groupsCounter].push(sorted[i]);
                 i++;
             }
@@ -142,14 +142,6 @@ function similarityMeasure(str1, str2) {
     return intersectionSize / unionSize;
 }
 
-function priceRatio(item1, item2) {
-    var price1 = item1[PRICE];
-    var price2 = item2[PRICE];
-    var smallerPrice = Math.min(price1, price2);
-    var largerPrice = Math.max(price1, price2);
-    return smallerPrice / largerPrice;
-}
-
 function findSimilarities(cartItems) {
     var groupedSimilarities = [];
     var indexDictionary = {};  // indexDictionary[k] == i iff cartItems[k] is grouped to group #i
@@ -159,7 +151,6 @@ function findSimilarities(cartItems) {
     for(var i = 0; i < cartItems.length; i++) {
         for(var j = i+1; j < cartItems.length; j++) {
             similarity = similarityMeasure(cartItems[i][TITLE], cartItems[j][TITLE]);
-            similarity *= priceRatio(cartItems[i], cartItems[j]);
             if(similarity >= THRESHOLD) {
                 if(!(i in indexDictionary)) {
                     indexDictionary[i] = groupsCounter;
