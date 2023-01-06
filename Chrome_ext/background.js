@@ -1,11 +1,11 @@
 // this is the global dictionary that will hold all the values.
 var SUPERCART_TAB_ID = -1;
-var TAB_OPENED = 
+// var TAB_OPENED = 
 chrome.action.onClicked.addListener(function () {
     chrome.tabs.create(
         { url: "MyCart/index.html" },
         function(tab){
-            SUPERCART_TAB_ID = tab.id
+            SUPERCART_TAB_ID = tab.id;
         }
     );
 });
@@ -16,5 +16,5 @@ chrome.runtime.onMessage.addListener(
       if (request.refresh_ui_tab === "true" && (SUPERCART_TAB_ID != -1) ){
           chrome.tabs.reload(SUPERCART_TAB_ID);
       }
-    }
+    }   
   );

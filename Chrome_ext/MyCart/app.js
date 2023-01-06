@@ -168,7 +168,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   chrome.storage.local.get(["CART_DICT"]).then((result) => {
     console.log(result.CART_DICT);
-    setup_ui(result.CART_DICT)
+    if (result.CART_DICT){
+      setup_ui(result.CART_DICT);
+    }
+    else {
+      setup_ui({});
+    };
   });
 });
 
