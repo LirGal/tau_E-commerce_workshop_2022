@@ -240,3 +240,11 @@ td.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.group {
+  border-left-style: solid;
+}
+
+.duplicated-cart-item {
+  margin-left: 5px;
+}

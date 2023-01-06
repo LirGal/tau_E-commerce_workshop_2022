@@ -9,15 +9,24 @@ const cartContent = document.querySelector(".cart-content");
 const shopNowBtn = document.querySelector(".shop-now-btn");
 const categoriesDropdown = document.querySelector("#categories-dropdown-content");
 
-const sortByWebsiteBtn = document.querySelector("#sortByBrand");
-const sortByTitleBtn = document.querySelector("#sortAToZ");
-const sortByPriceAscendingBtn = document.querySelector("#sortByPriceAscending");
-const sortByPriceDescendingBtn = document.querySelector("#sortByPriceDescending");
+const sortByWebsiteBtn = document.querySelector("#sort-by-brand");
+const sortByTitleBtn = document.querySelector("#sort-a-to-z");
+const sortByPriceAscendingBtn = document.querySelector("#sort-by-price-ascending");
+const sortByPriceDescendingBtn = document.querySelector("#sort-by-price-descending");
 
-const sortByWebsiteText = "Brand";
-const sortByTitleText = "A-Z";
-const sortByPriceAscendingText = "Price (low to high)";
-const sortByPriceDescendingText = "Price (high to low)";
+const duplicates = document.querySelector(".duplicates");
+const similarities = document.querySelector(".similarities");
+const findDuplicatesBtn = document.querySelector("#find-duplicates");
+const findSimilaritiesBtn = document.querySelector("#find-similarities");
+
+const SORT_BY_WEBSITE_TEXT = "Brand";
+const SORT_BY_TITLE_TEXT = "A-Z";
+const SORT_BY_PRICE_ASCENDING_TEXT = "Price (low to high)";
+const SORT_BY_PRICE_DESCENDING_TEXT = "Price (high to low)";
+const FIND_DUPLICATES_TEXT = "Find duplicates";
+const FIND_SIMILARITIES_TEXT = "Find similarities";
+const NONE = "none";
+const BLOCK = "block";
 
 var categorySelectors;
 var selectedCategories = new Set();
@@ -79,10 +88,10 @@ class UI {
   }
 
   resetAllSortByCheckboxes() {
-    sortByWebsiteBtn.innerHTML = sortByWebsiteText;
-    sortByTitleBtn.innerHTML = sortByTitleText;
-    sortByPriceAscendingBtn.innerHTML = sortByPriceAscendingText;
-    sortByPriceDescendingBtn.innerHTML = sortByPriceDescendingText;
+    sortByWebsiteBtn.innerHTML = SORT_BY_WEBSITE_TEXT;
+    sortByTitleBtn.innerHTML = SORT_BY_TITLE_TEXT;
+    sortByPriceAscendingBtn.innerHTML = SORT_BY_PRICE_ASCENDING_TEXT;
+    sortByPriceDescendingBtn.innerHTML = SORT_BY_PRICE_DESCENDING_TEXT;
   }
 
   boldAndUnboldCategoryCheckboxes() {
@@ -98,6 +107,11 @@ class UI {
   }
 
   sortBy(cart, paremeter, selector, text) {
+    similarities.style.display = NONE;
+    findSimilaritiesBtn.innerHTML = FIND_SIMILARITIES_TEXT;
+    duplicates.style.display = NONE;
+    findDuplicatesBtn.innerHTML = FIND_DUPLICATES_TEXT;
+
     this.resetAllSortByCheckboxes();
     selectedCategories = new Set();
     this.boldAndUnboldCategoryCheckboxes();
@@ -131,6 +145,60 @@ class UI {
     this.populateCart(relevantItems);
   }
 
+  showGroupedList(groupedList, div) {
+    var groupDiv;
+    var itemDiv;
+    for(const group of groupedList) {
+      groupDiv = document.createElement("div");
+      groupDiv.classList.add("group");
+      for(const item of group) {
+        itemDiv = document.createElement("div");
+        itemDiv.classList.add("cart-item");
+        itemDiv.classList.add("duplicated-cart-item");
+        itemDiv.innerHTML += `
+        <img src=${item.image} alt="product">
+        <div>
+          <h4>${item.title}</h4>
+          <h5>$${item.price} | x${item.amount}</h5>
+          <h5>${item.website}</h5>
+        </div>
+        `;
+        groupDiv.appendChild(itemDiv);
+      }
+      div.appendChild(groupDiv);
+    }
+  }
+
+  findDuplicates(cart) {
+    similarities.style.display = NONE;
+    findSimilaritiesBtn.innerHTML = FIND_SIMILARITIES_TEXT;
+    if(duplicates.style.display == NONE) {
+      duplicates.style.display = BLOCK;
+      findDuplicatesBtn.innerHTML = "<b>" + FIND_DUPLICATES_TEXT + "</b>";
+    }
+    else {
+      duplicates.style.display = NONE;
+      findDuplicatesBtn.innerHTML = FIND_DUPLICATES_TEXT;
+    }
+    var groupedDuplicates = findDuplicates(cart);  // function declared in analytics.js
+    this.showGroupedList(groupedDuplicates, duplicates);
+  }
+
+  findSimilarities(cart) {
+    duplicates.style.display = NONE;
+    findDuplicatesBtn.innerHTML = FIND_DUPLICATES_TEXT;
+    if(similarities.style.display == NONE) {
+      similarities.style.display = BLOCK;
+      findSimilaritiesBtn.innerHTML = "<b>" + FIND_SIMILARITIES_TEXT + "</b>";
+    }
+    else {
+      similarities.style.display = NONE;
+      findSimilaritiesBtn.innerHTML = FIND_SIMILARITIES_TEXT;
+    }
+    var groupedSimilarities = findSimilarities(cart);  // function declared in analytics.js
+    this.showGroupedList(groupedSimilarities, similarities);
+  }
+
   setupAPP(cart) {
     this.setCartValues(cart);
     this.populateCart(cart);
@@ -143,16 +211,16 @@ class UI {
     var currentUI = this;
 
     sortByWebsiteBtn.addEventListener("click", function() {
-      currentUI.sortBy(cart, WEBSITE, sortByWebsiteBtn, sortByWebsiteText);
+      currentUI.sortBy(cart, WEBSITE, sortByWebsiteBtn, SORT_BY_WEBSITE_TEXT);
     });
     sortByTitleBtn.addEventListener("click", function() {
-      currentUI.sortBy(cart, TITLE, sortByTitleBtn, sortByTitleText);
+      currentUI.sortBy(cart, TITLE, sortByTitleBtn, SORT_BY_TITLE_TEXT);
     });
     sortByPriceAscendingBtn.addEventListener("click", function() {
-      currentUI.sortBy(cart, PRICE_ASCENDING, sortByPriceAscendingBtn, sortByPriceAscendingText);
+      currentUI.sortBy(cart, PRICE_ASCENDING, sortByPriceAscendingBtn, SORT_BY_PRICE_ASCENDING_TEXT);
     });
     sortByPriceDescendingBtn.addEventListener("click", function() {
-      currentUI.sortBy(cart, PRICE_DESCENDING, sortByPriceDescendingBtn, sortByPriceDescendingText);
+      currentUI.sortBy(cart, PRICE_DESCENDING, sortByPriceDescendingBtn, SORT_BY_PRICE_DESCENDING_TEXT);
     });
 
     categorySelectors = document.querySelectorAll(".category-checkbox");
@@ -161,6 +229,14 @@ class UI {
         currentUI.filter(event, cart);
       });
     });
+
+    findDuplicatesBtn.addEventListener("click", function() {
+      currentUI.findDuplicates(cart);
+    });
+
+    findSimilaritiesBtn.addEventListener("click", function() {
+      currentUI.findSimilarities(cart);
+    });
   }
 }
 
@@ -168,12 +244,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   chrome.storage.local.get(["CART_DICT"]).then((result) => {
     console.log(result.CART_DICT);
-    if (result.CART_DICT){
+    if(result.CART_DICT) {
       setup_ui(result.CART_DICT);
     }
     else {
       setup_ui({});
-    };
+    }
   });
 });
 

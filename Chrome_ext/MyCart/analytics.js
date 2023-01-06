@@ -7,6 +7,8 @@ const CATEGORIES = "categories";
 const TITLE = "title";
 const WEBSITE = "website";
 
+const THRESHOLD = 11/48;
+
 const specialCharacters = [/&quot;/g, /&amp;/g, /&lt;/g, /&gt;/g, /&nbsp;/g, /[^a-zA-Z0-9\- ]/g];
 
 function removeSpecialCharacters(str) {
@@ -21,6 +23,10 @@ function compareStrings(str1, str2) {
     str1 = removeSpecialCharacters(str1);
     str2 = removeSpecialCharacters(str2);
     return str1.localeCompare(str2);
+}
+
+function compareID(item1, item2) {
+    return compareStrings(item1[ID], item2[ID]);
 }
 
 function compareTitle(item1, item2) {
@@ -57,6 +63,9 @@ function sortBy(cartItems, parameter) {
     if(parameter == PRICE_DESCENDING) {
         return cartItemsCopy.sort(comparePriceDescending);
     }
+    if(parameter == ID) {
+        return cartItemsCopy.sort(compareID);
+    }
 }
 
 function getCategories(item) {
@@ -83,4 +92,86 @@ function filter(cartItems, categories) {
         relevantItems.push(item);
     }
     return relevantItems;
+}
+
+function findDuplicates(cartItems) {
+    var sorted = sortBy(cartItems, ID);
+    var groupedDuplicates = [];
+    var groupsCounter = 0;
+    for(var i = 0; i < sorted.length-1; i++) {
+        if(compareID(sorted[i], sorted[i+1]) == 0) {
+            groupedDuplicates.push([]);
+            while(i < sorted.length && compareID(sorted[i], sorted[i+1]) == 0) {
+                groupedDuplicates[groupsCounter].push(sorted[i]);
+                i++;
+            }
+            groupedDuplicates[groupsCounter].push(sorted[i]);
+            groupsCounter++;
+        }
+    }
+    return groupedDuplicates;
+}
+
+function union(set1, set2) {
+    const union = new Set(set1);
+    for(const element of set2) {
+      union.add(element);
+    }
+    return union;
+  }
+  
+  function intersection(set1, set2) {
+    const intersection = new Set();
+    for(const element of set2) {
+      if(set1.has(element)) {
+        intersection.add(element);
+      }
+    }
+    return intersection;
+  }
+
+function similarityMeasure(str1, str2) {
+    str1 = removeSpecialCharacters(str1);
+    str2 = removeSpecialCharacters(str2);
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+    var words1 = new Set(str1.split(' '));
+    var words2 = new Set(str2.split(' '));
+    var unionSize = union(words1, words2).size;
+    var intersectionSize = intersection(words1, words2).size;
+    return intersectionSize / unionSize;
+}
+
+function priceRatio(item1, item2) {
+    var price1 = item1[PRICE];
+    var price2 = item2[PRICE];
+    var smallerPrice = Math.min(price1, price2);
+    var largerPrice = Math.max(price1, price2);
+    return smallerPrice / largerPrice;
+}
+
+function findSimilarities(cartItems) {
+    var groupedSimilarities = [];
+    var indexDictionary = {};  // indexDictionary[k] == i iff cartItems[k] is grouped to group #i
+    var groupsCounter = 0;
+    var similarity;
+    var groupIndex;
+    for(var i = 0; i < cartItems.length; i++) {
+        for(var j = i+1; j < cartItems.length; j++) {
+            similarity = similarityMeasure(cartItems[i][TITLE], cartItems[j][TITLE]);
+            similarity *= priceRatio(cartItems[i], cartItems[j]);
+            if(similarity >= THRESHOLD) {
+                if(!(i in indexDictionary)) {
+                    indexDictionary[i] = groupsCounter;
+                    groupsCounter++;
+                    groupedSimilarities.push(new Set());
+                }
+                groupIndex = indexDictionary[i];
+                indexDictionary[j] = groupIndex;
+                groupedSimilarities[groupIndex].add(cartItems[i]);
+                groupedSimilarities[groupIndex].add(cartItems[j]);
+            }
+        }
+    }
+    return groupedSimilarities;
 }
