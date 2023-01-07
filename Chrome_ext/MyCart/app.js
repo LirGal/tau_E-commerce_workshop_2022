@@ -23,6 +23,7 @@ const SORT_BY_WEBSITE_TEXT = "Brand";
 const SORT_BY_TITLE_TEXT = "A-Z";
 const SORT_BY_PRICE_ASCENDING_TEXT = "Price (low to high)";
 const SORT_BY_PRICE_DESCENDING_TEXT = "Price (high to low)";
+const UNSELECTED = "unselected";
 const FIND_DUPLICATES_TEXT = "Find duplicates";
 const FIND_SIMILARITIES_TEXT = "Find similarities";
 const NONE = "none";
@@ -30,7 +31,10 @@ const BLOCK = "block";
 
 var categorySelectors;
 var selectedCategories = new Set();
+var sortToggle = UNSELECTED;
 const categories = new Set(["Dresses", "Hoodies", "Jackets & Coats", "Jeans", "Men", "Polos", "Shirts", "T-Shirts", "Vests", "Women"]);
+
+var filteredCart;
 
 // display products
 class UI {
@@ -104,23 +108,29 @@ class UI {
     });
   }
 
-  sortBy(cart, paremeter, selector, text) {
+  sortBy(paremeter, selector, text) {
     similarities.style.display = NONE;
     findSimilaritiesBtn.innerHTML = FIND_SIMILARITIES_TEXT;
     duplicates.style.display = NONE;
     findDuplicatesBtn.innerHTML = FIND_DUPLICATES_TEXT;
 
+    var sorted;
     this.resetAllSortByCheckboxes();
-    selectedCategories = new Set();
-    this.boldAndUnboldCategoryCheckboxes();
-    selector.innerHTML = "<b>" + text + "</b>";
-    var sorted = sortBy(cart, paremeter);  // function declared in analytics.js
+    if(paremeter != sortToggle) {
+      selector.innerHTML = "<b>" + text + "</b>";
+      sortToggle = paremeter;
+      sorted = sortBy(filteredCart, paremeter);  // function declared in analytics.js
+    }
+    else {
+      sorted = filteredCart;
+      sortToggle = UNSELECTED;
+    }
+
     this.setCartValues(sorted);
     this.populateCart(sorted);
   }
 
   filter(event, cart) {
-    this.resetAllSortByCheckboxes();
     var category = event.target.innerText;
     if(selectedCategories.has(category)) {
       selectedCategories.delete(category);
@@ -131,16 +141,19 @@ class UI {
 
     this.boldAndUnboldCategoryCheckboxes()
 
-    var relevantItems;
     if(selectedCategories.size > 0) {
-      relevantItems = filter(cart, selectedCategories);  // function declared in analytics.js
+      filteredCart = filter(cart, selectedCategories);  // function declared in analytics.js
     }
     else {
-      relevantItems = cart;
+      filteredCart = cart;
     }
 
-    this.setCartValues(relevantItems);
-    this.populateCart(relevantItems);
+    if(sortToggle != UNSELECTED) {
+      filteredCart = sortBy(filteredCart, sortToggle);  // function declared in analytics.js
+    }
+
+    this.setCartValues(filteredCart);
+    this.populateCart(filteredCart);
   }
 
   showGroupedList(groupedList, div) {
@@ -225,16 +238,16 @@ class UI {
     var currentUI = this;
 
     sortByWebsiteBtn.addEventListener("click", function() {
-      currentUI.sortBy(cart, WEBSITE, sortByWebsiteBtn, SORT_BY_WEBSITE_TEXT);
+      currentUI.sortBy(WEBSITE, sortByWebsiteBtn, SORT_BY_WEBSITE_TEXT);
     });
     sortByTitleBtn.addEventListener("click", function() {
-      currentUI.sortBy(cart, TITLE, sortByTitleBtn, SORT_BY_TITLE_TEXT);
+      currentUI.sortBy(TITLE, sortByTitleBtn, SORT_BY_TITLE_TEXT);
     });
     sortByPriceAscendingBtn.addEventListener("click", function() {
-      currentUI.sortBy(cart, PRICE_ASCENDING, sortByPriceAscendingBtn, SORT_BY_PRICE_ASCENDING_TEXT);
+      currentUI.sortBy(PRICE_ASCENDING, sortByPriceAscendingBtn, SORT_BY_PRICE_ASCENDING_TEXT);
     });
     sortByPriceDescendingBtn.addEventListener("click", function() {
-      currentUI.sortBy(cart, PRICE_DESCENDING, sortByPriceDescendingBtn, SORT_BY_PRICE_DESCENDING_TEXT);
+      currentUI.sortBy(PRICE_DESCENDING, sortByPriceDescendingBtn, SORT_BY_PRICE_DESCENDING_TEXT);
     });
 
     categorySelectors = document.querySelectorAll(".category-checkbox");
@@ -275,6 +288,8 @@ async function setup_ui(global_cart)
       products_list.push(product_details);
     }
   }
+
+  filteredCart = products_list;
 
   console.log("final_dict:", products_list);
 
