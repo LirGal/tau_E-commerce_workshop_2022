@@ -54,10 +54,10 @@ body {
   font-size: 36px;
 }
 /* --------------- End of Navbar ---------------- */
-/* --------------- Hero ---------------- */
-.hero {
+/* --------------- Banner ---------------- */
+.banner-header {
   min-height: calc(100vh - 60px);
-  background: url("./images/hero-fashion-bcg.jpg") center/cover no-repeat;
+  background: url("./images/fashion-bcg.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,9 +89,8 @@ body {
   background: transparent;
   color: #87CEFA;
 }
-/* --------------- End of Hero ---------------- */
+/* --------------- End of Banner ---------------- */
 /* --------------- Products ---------------- */
-
 .products {
   padding: 4rem 0;
 }
@@ -115,7 +114,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-.bag-btn {
+.add-to-cart-btn {
   position: absolute;
   top: 70%;
   right: 0;
@@ -127,15 +126,16 @@ body {
   font-weight: bold;
   transition: all 0.3s linear;
   transform: translateX(101%);
+  /* Not visable without changing the transform */
   cursor: pointer;
 }
-.bag-btn:hover {
+.add-to-cart-btn:hover {
   color: #fff;
 }
 .fa-shopping-cart {
   margin-right: 0.5rem;
 }
-.img-container:hover .bag-btn {
+.img-container:hover .add-to-cart-btn {
   transform: translateX(0);
 }
 .product-img {
@@ -149,7 +149,6 @@ body {
 .img-container:hover .product-img {
   opacity: 0.5;
 }
-
 .product h3 {
   text-transform: capitalize;
   font-size: 1.1rem;
@@ -157,14 +156,12 @@ body {
   letter-spacing: 0.1rem;
   text-align: center;
 }
-
 .product h4 {
   margin-top: 0.7rem;
   letter-spacing: 0.1rem;
   color: #87CEFA;
   text-align: center;
 }
-
 /* ---------------End of Products ---------------- */
 /* --------------- Cart ---------------- */
 .cart-overlay {
@@ -203,7 +200,6 @@ body {
     min-width: 450px;
   }
 }
-
 .close-cart {
   font-size: 1.7rem;
   cursor: pointer;
@@ -219,6 +215,7 @@ body {
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr auto;
+  /* Image - Text - Amount Control */
   grid-column-gap: 1.5rem;
   margin: 1.5rem 0;
 }
@@ -248,7 +245,6 @@ body {
   cursor: pointer;
 }
 /*---------- End of Cart Item -------------------- */
-
 .cart-footer {
   margin-top: 2rem;
   letter-spacing: 0.1rem;
@@ -258,5 +254,4 @@ body {
   text-transform: capitalize;
   margin-bottom: 1rem;
 }
-
 /* --------------- End of Cart ---------------- */

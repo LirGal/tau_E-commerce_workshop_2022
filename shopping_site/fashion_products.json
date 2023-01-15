@@ -496,22 +496,6 @@
       ["Clothing, Shoes & Jewelry", "Girls"]
     ]
   }, {
-    "asin": "B0001MX7AC",
-    "title": "Black Leather Men's Bomber Jacket (#299-0)",
-    "price": 185.99,
-    "imUrl": "http://ecx.images-amazon.com/images/I/31AYVS9PNWL._SX342_.jpg",
-    "related": {
-      "also_viewed": ["B009JNG5LC", "B000XP0FDY", "B008KCJZQK", "B0001MX7BG", "B00E7T9MIQ", "B0093W8MQA", "B001GH4JDU", "B00CQG2ICO"]
-    },
-    "salesRank": {
-      "Clothing": 1183880
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Women", "Petite", "Outerwear & Coats"],
-      ["Clothing, Shoes & Jewelry", "Men", "Clothing", "Jackets & Coats", "Leather & Faux Leather"],
-      ["Clothing, Shoes & Jewelry", "Men", "Big & Tall"]
-    ]
-  }, {
     "asin": "B0001MX7CK",
     "title": "Distressed Brown Leather Bomber Jacket (Men's) (#299-2)",
     "price": 185.99,
@@ -1271,22 +1255,6 @@
       ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Hoodies"]
     ]
   }, {
-    "asin": "B0007YUNLK",
-    "title": "CTM&reg; Mens Elastic Button-End 1 1/2 Inch Chili Suspenders",
-    "price": 17.95,
-    "imUrl": "http://ecx.images-amazon.com/images/I/41A6AHS6BTL._SX342_.jpg",
-    "related": {
-      "also_viewed": ["B006L6P7A0"]
-    },
-    "salesRank": {
-      "Clothing": 974305
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Men", "Clothing", "Jeans"],
-      ["Clothing, Shoes & Jewelry", "Men", "Accessories", "Suspenders"],
-      ["Clothing, Shoes & Jewelry", "Men", "Big & Tall"]
-    ]
-  }, {
     "asin": "B00080VFOW",
     "title": "1984-1996 Corvette Jacket C4 Aviator",
     "price": 89.95,
@@ -1345,25 +1313,6 @@
     "categories": [
       ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Women", "Tops & Tees", "T-Shirts"],
       ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Shirts", "T-Shirts"]
-    ]
-  }, {
-    "asin": "B0008172YS",
-    "related": {
-      "also_bought": ["B005OCRZO8", "B00FP462DK", "B000CCIPWQ", "B00CPR45IE", "B00JK2Q9JK", "B009T9TJDW", "B005SEQAFW", "B000YZ3QWK", "B005PF5ITS", "B004L8J0C6", "B005PH9TE6", "B000O1FD6Q", "B002ON394U", "B00CLX00BS", "B00C7CVD00", "B002ON6N2K", "B007OAFMH0", "B004L281S6", "B001LNS58Y", "B003E1WIAW", "B001Z5PDEC", "B00DEMNAUS", "B0043GB128", "B004YN0PV8", "B00E0N7VNM", "B006L74FRA", "B00DJS63Q0", "B00C1PGC04", "B000O1K4EM", "B00BFYK4KG", "B00EFZ35US", "B001KUWM3C", "B008J5O30G", "B003ANNKHY", "B00JKH1J9A", "B00CHQUVM2", "B00H7QL42S", "B00H69OTGY", "B000A68E48", "B00CBQ6TXS", "B007SOHXK6", "B00HI137BS", "B0052H0EW0", "B00H8AG1WQ", "B001KXHBJE", "B00AEF5IU8", "B000IF9HQA", "B007EEB4P0", "B003N18GWW", "B00A7L8ZKE", "B006NZPZ8I", "B001LYAQSU", "B00EW60YGS", "B001PP7HJG", "B00AERKG94", "B000GG1JLC", "B008Y8UYD8", "B000RWNBZM", "B00BYBZDBU", "B002AQRVZE", "B00CS9FWGI", "B00CAI8ALQ", "B00H02BSO8", "B001GU139A", "B001UESTGW", "B00DOHNQ6Q", "B00L1SWQO8", "B000LMRFX2", "B00B6QF12O", "B00B4WT108", "B00188I6TA", "B0000VLZXA", "B00AERULIU", "B002AQRTCE"],
-      "also_viewed": ["B005PF5ITS", "B00JK2Q9JK", "B005OCRZO8", "B004CNNQJI", "B005SEQAFW", "B000YZ3QWK", "B00CLX00BS", "B0043GB128", "B007OAFMH0", "B00C7CVD00", "B005PF85L6", "B001LNS58Y", "B002L4OMIO", "B004LO0KKG", "B008J5O30G", "B00FP462DK", "B00HGGC6B2", "B000CCIPWQ", "B00J2DBNJS", "B005F0CHYM", "B000O1K4EM", "B006L4PIO2", "B002ON394U", "B00CPR45IE", "B008OJK3KQ", "B009T9TJDW", "B00EFZ35US", "B00EM2QAWO", "B005PH9TE6", "B00FZRCLQ4", "B0047VW9CA", "B000O1FD6Q", "B00A9724E4", "B004YN0PV8", "B00E0N7VNM", "B003ANNKHY", "B00DJ7BHAI", "B004L281S6", "B00DEMNAUS", "B00BUKVM74", "B003ANLJ4U", "B008VO8BS0", "B00GNZMB0I", "B00DJS63Q0", "B007BD4EWY", "B003U30R6G", "B00GI7BC9M", "B0041H3YZG", "B00H7QL42S", "B00A7L8ZKE", "B002ON6N2K", "B004L8J0C6", "B0037JRZCC", "B00GI9B7SG", "B003E1WIAW", "B00EFZ0NAI", "B004OSSXRG", "B00EFYVQYG", "B001Z5PDEC", "B006QD0LZO"],
-      "bought_together": ["B00CPR45IE", "B005OCRZO8", "B00FP462DK", "B009T9TJDW"]
-    },
-    "title": "Wonder Button, Collar Expanders, Collar Extender",
-    "price": 5.79,
-    "salesRank": {
-      "Clothing": 5304
-    },
-    "imUrl": "http://ecx.images-amazon.com/images/I/41iEPmIEwUL._SX342_.jpg",
-    "brand": "Competition",
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Men", "Clothing", "Shirts", "Dress Shirts"],
-      ["Clothing, Shoes & Jewelry", "Men", "Big & Tall"],
-      ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Band & Music Fan", "Accessories"]
     ]
   }, {
     "asin": "B00081USIU",
@@ -1787,22 +1736,6 @@
       ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Shirts", "T-Shirts"]
     ]
   }, {
-    "asin": "B000A6HRYG",
-    "title": "Got Your Tickets to the Gun Show T-shirt (Men's Kelly Green)",
-    "price": 13.95,
-    "imUrl": "http://ecx.images-amazon.com/images/I/41FGP41SZBL.jpg",
-    "related": {
-      "also_viewed": ["B00ATRSJ0C", "B00DDXEOO4", "B000ESE8W4", "B000I9IWZI", "B004ZY5PFM", "B00CMV2AQW", "B00DDXEHIM", "B003NWSYDC"]
-    },
-    "salesRank": {
-      "Clothing": 211559
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Women"],
-      ["Clothing, Shoes & Jewelry", "Men"],
-      ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Shirts", "T-Shirts"]
-    ]
-  }, {
     "asin": "B000AAVYAU",
     "title": "G &amp; F Heavyweight 35MM PVC Over Polyester Raincoat, X-Large",
     "price": 21.99,
@@ -1907,21 +1840,6 @@
       ["Clothing, Shoes & Jewelry", "Men"],
       ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Shirts", "T-Shirts"],
       ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Band & Music Fan", "T-Shirts"]
-    ]
-  }, {
-    "asin": "B000B59Y42",
-    "title": "Jean Newsboy Caps-Olive",
-    "price": 19.99,
-    "imUrl": "http://ecx.images-amazon.com/images/I/417BxB20zcL._SX342_.jpg",
-    "related": {
-      "also_viewed": ["B002GZTJC2", "B00DMRD9OW", "B00C7P64JC"]
-    },
-    "salesRank": {
-      "Clothing": 1670947
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Men", "Clothing", "Jeans"],
-      ["Clothing, Shoes & Jewelry", "Men", "Big & Tall"]
     ]
   }, {
     "asin": "B000B6A3ZU",
@@ -3106,22 +3024,6 @@
       ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Shirts", "T-Shirts"]
     ]
   }, {
-    "asin": "B000ENMR3Q",
-    "title": "ABS Allen Schwartz Women's Strapless Side Tucks Gown",
-    "price": 182.0,
-    "imUrl": "http://ecx.images-amazon.com/images/I/31C-Pi8QRKL._SX342_.jpg",
-    "related": {
-      "also_viewed": ["B002YX0KWE", "B006ZUO5PK", "B00BIMT2WQ", "B00DC6HHRI", "B00CKUE4GY", "B00HG7WTEU", "B00HRTJZ08"]
-    },
-    "salesRank": {
-      "Clothing": 853845
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Women", "Clothing", "Dresses", "Special Occasion"],
-      ["Clothing, Shoes & Jewelry", "Women", "Petite", "Dresses", "Special Occasion"],
-      ["Clothing, Shoes & Jewelry", "Women's Luxury Brands"]
-    ]
-  }, {
     "asin": "B000ENQXF4",
     "title": "ABS Allen Schwartz Women's Strapless Side Tucks Gown",
     "price": 182.0,
@@ -4172,24 +4074,6 @@
     "categories": [
       ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Women", "Tops & Tees", "T-Shirts"],
       ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Shirts", "T-Shirts"]
-    ]
-  }, {
-    "asin": "B000IEUXSM",
-    "title": "Safety Green T-Shirt - in your choice of sizes",
-    "price": 6.5,
-    "imUrl": "http://ecx.images-amazon.com/images/I/31g0R9BltFL._SX342_.jpg",
-    "related": {
-      "also_bought": ["B001UL7EDE", "B000GBBZ20", "B00294TIQW", "B002ZPMYB6", "B00J05XXMI", "B002SRDG72", "B003TVDG8U", "B00BF400TG", "B001A3Y9PI", "B00079WDZ4", "B002BDTZV4", "B0039O4HLC", "B0071DT9YM", "B005N6YKNO", "B0023RH7U4", "B001P8ZRNG", "B001DCT3KW", "B004Y6R5EA", "B002IPFX5C"],
-      "also_viewed": ["B002ZPMYB6", "B00A93ERP2", "B00J05XXMI", "B000GBBZ20", "B001UL7EDE", "B00BIKWI24", "B00294TIQW", "B00IKGIX82", "B001C1ZYJI", "B00KODZGSY", "B00BF400TG", "B001A3YAM0", "B00470N3GM", "B0057X8AY8", "B002BDTZV4", "B00IKGIY86", "B00IKGIX6E", "B005N6YKNO", "B0071DT9YM", "B000A81THU", "B000GBBZ2U", "B000BY41FK", "B00IKGIYCC", "B00079WDZ4", "B000ICXD2W", "B000BVGLTM", "B00470QFHQ", "B000GBBZ2K", "B0057X8BOW", "B00GZ0QAB2", "B000ICX36I", "B008WALUUY", "B002BDTZRI", "B00JOSL9P4", "B004WKRA1Q", "B0023RKWXI", "B00J9UKN8G", "B002BDTZS2", "B00C9QP2HO", "B00IKGJ1TW", "B00AZ70UBW", "B0047UNDEO", "B00BXPAOCA", "B003AMFI8Y", "B0015ES0SE", "B0041UAEC4", "B00FR9R5VQ", "B003OBP03E", "B00753NFFC", "B000O3NBQI", "B00AZ71TQC", "B001DCT3KW", "B0023RH7U4", "B0057X8ATS", "B003TP8HJ4"],
-      "bought_together": ["B001UL7EDE", "B000GBBZ20"]
-    },
-    "salesRank": {
-      "Clothing": 37210
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Men"],
-      ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Shirts", "T-Shirts"],
-      ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Band & Music Fan", "T-Shirts"]
     ]
   }, {
     "asin": "B000IEUXU0",
@@ -6268,74 +6152,6 @@
       ["Clothing, Shoes & Jewelry", "Women", "Petite", "Active", "Active Shirts & Tees"]
     ]
   }, {
-    "asin": "B000NWJN2Q",
-    "title": "NYDJ Women's Petite Sarah Boot Leg Jean",
-    "price": 104.0,
-    "imUrl": "http://ecx.images-amazon.com/images/I/41QKXwOx8ZL._SX342_.jpg",
-    "related": {
-      "also_bought": ["B002Y273UC", "B00AEMHY2G", "B00H4Y6BJ4", "B004CRTYEA", "B002Y2744C", "B000NWOAN8", "B00CHIQT5S", "B008OTS8NU", "B00CZ36QG2", "B00CZ36OPA", "B004071YVS", "B00CZ36QIU", "B004CRTYEU", "B004CRTYFE", "B00H4Y6D3I", "B00GPHQREU", "B00HROQCRC", "B00FXVZF4W", "B005DPLYSO", "B00CZ36PPO", "B00CHIQT5I", "B00GPHQPYC", "B00B8MINIU", "B00DZL234C", "B00EBXKO4O", "B00D85Z3ZQ", "B002DUCVES", "B00FXVZESE", "B00AEMHY30", "B002DUCUG2", "B00AEMHYXK", "B0018QZX8Y"],
-      "also_viewed": ["B002Y273UC", "B004CRTYEA", "B002Y2744C", "B000NWOAN8", "B00AEMHY2G", "B004071YVS", "B00H4Y6BJ4", "B002DUCVES", "B00CZ36OPA", "B00AEMHY30", "B00CZ36QIU", "B004CRTYEU", "B002DUCV9S", "B00CHIQT5I", "B004CRTYFE", "B00B8MINIU", "B00CHIQT5S", "B00B8MINCG", "B00IR6WQ0G", "B00CZ36QG2", "B00H4Y6B6W", "B00GPHQREU", "B004CRTYJ0", "B00GPHQPY2", "B002DUCUG2", "B00AEMHYXK", "B008TRSTQS", "B00EBXKO4O", "B00GPHQPYC", "B00GPHMC5S", "B00AEM0L94", "B002DUCU3U", "B00FXVZ9QQ", "B004CRTYIG", "B001B2KW4K", "B00GPHQQ64", "B00ELJ60N2", "B008TRSUGM", "B008OTS8NU", "B00BCG27MU", "B004FV67J8", "B00CGXW23W", "B00H9FN4YS", "B00FXVZ9D4", "B00GPHMCCG", "B004CRTYGS", "B00GPHMC8A", "B00GPHMDRA", "B00CGXW17E", "B00AEMHYW6", "B00AEM40BO", "B00AEMHY4E", "B00FWXG2FW", "B00GPHMCBC", "B007ZN5NUW", "B008FVXKO4", "B002S0ONDA", "B00CZ36PPO"],
-      "bought_together": ["B002Y273UC", "B00AEMHY2G", "B004CRTYEA", "B00H4Y6BJ4"]
-    },
-    "salesRank": {
-      "Clothing": 30507
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Women", "Clothing", "Jeans"],
-      ["Clothing, Shoes & Jewelry", "Women", "Petite", "Jeans"]
-    ]
-  }, {
-    "asin": "B000NWKP0U",
-    "title": "NYDJ Women's Petite Sarah Boot Leg Jean",
-    "price": 104.0,
-    "imUrl": "http://ecx.images-amazon.com/images/I/41QKXwOx8ZL._SX342_.jpg",
-    "related": {
-      "also_bought": ["B002Y273UC", "B00AEMHY2G", "B00H4Y6BJ4", "B004CRTYEA", "B002Y2744C", "B000NWOAN8", "B00CHIQT5S", "B008OTS8NU", "B00CZ36QG2", "B00CZ36OPA", "B004071YVS", "B00CZ36QIU", "B004CRTYEU", "B004CRTYFE", "B00H4Y6D3I", "B00GPHQREU", "B00HROQCRC", "B00FXVZF4W", "B005DPLYSO", "B00CZ36PPO", "B00CHIQT5I", "B00GPHQPYC", "B00B8MINIU", "B00DZL234C", "B00EBXKO4O", "B00D85Z3ZQ", "B002DUCVES", "B00FXVZESE", "B00AEMHY30", "B002DUCUG2", "B00AEMHYXK", "B0018QZX8Y"],
-      "also_viewed": ["B002Y273UC", "B004CRTYEA", "B002Y2744C", "B000NWOAN8", "B00AEMHY2G", "B004071YVS", "B00H4Y6BJ4", "B002DUCVES", "B00CZ36OPA", "B00AEMHY30", "B00CZ36QIU", "B004CRTYEU", "B002DUCV9S", "B00CHIQT5I", "B004CRTYFE", "B00B8MINIU", "B00CHIQT5S", "B00B8MINCG", "B00IR6WQ0G", "B00CZ36QG2", "B00H4Y6B6W", "B00GPHQREU", "B004CRTYJ0", "B00GPHQPY2", "B002DUCUG2", "B00AEMHYXK", "B008TRSTQS", "B00EBXKO4O", "B00GPHQPYC", "B00GPHMC5S", "B00AEM0L94", "B002DUCU3U", "B00FXVZ9QQ", "B004CRTYIG", "B001B2KW4K", "B00GPHQQ64", "B00ELJ60N2", "B008TRSUGM", "B008OTS8NU", "B00BCG27MU", "B004FV67J8", "B00CGXW23W", "B00H9FN4YS", "B00FXVZ9D4", "B00GPHMCCG", "B004CRTYGS", "B00GPHMC8A", "B00GPHMDRA", "B00CGXW17E", "B00AEMHYW6", "B00AEM40BO", "B00AEMHY4E", "B00FWXG2FW", "B00GPHMCBC", "B007ZN5NUW", "B008FVXKO4", "B002S0ONDA", "B00CZ36PPO"],
-      "bought_together": ["B002Y273UC", "B00AEMHY2G", "B004CRTYEA", "B00H4Y6BJ4"]
-    },
-    "salesRank": {
-      "Clothing": 30507
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Women", "Clothing", "Jeans"],
-      ["Clothing, Shoes & Jewelry", "Women", "Petite", "Jeans"]
-    ]
-  }, {
-    "asin": "B000NWJMZY",
-    "title": "NYDJ Women's Petite Sarah Boot Leg Jean",
-    "price": 104.0,
-    "imUrl": "http://ecx.images-amazon.com/images/I/41QKXwOx8ZL._SX342_.jpg",
-    "related": {
-      "also_bought": ["B002Y273UC", "B00AEMHY2G", "B00H4Y6BJ4", "B004CRTYEA", "B002Y2744C", "B000NWOAN8", "B00CHIQT5S", "B008OTS8NU", "B00CZ36QG2", "B00CZ36OPA", "B004071YVS", "B00CZ36QIU", "B004CRTYEU", "B004CRTYFE", "B00H4Y6D3I", "B00GPHQREU", "B00HROQCRC", "B00FXVZF4W", "B005DPLYSO", "B00CZ36PPO", "B00CHIQT5I", "B00GPHQPYC", "B00B8MINIU", "B00DZL234C", "B00EBXKO4O", "B00D85Z3ZQ", "B002DUCVES", "B00FXVZESE", "B00AEMHY30", "B002DUCUG2", "B00AEMHYXK", "B0018QZX8Y"],
-      "also_viewed": ["B002Y273UC", "B004CRTYEA", "B002Y2744C", "B000NWOAN8", "B00AEMHY2G", "B004071YVS", "B00H4Y6BJ4", "B002DUCVES", "B00CZ36OPA", "B00AEMHY30", "B00CZ36QIU", "B004CRTYEU", "B002DUCV9S", "B00CHIQT5I", "B004CRTYFE", "B00B8MINIU", "B00CHIQT5S", "B00B8MINCG", "B00IR6WQ0G", "B00CZ36QG2", "B00H4Y6B6W", "B00GPHQREU", "B004CRTYJ0", "B00GPHQPY2", "B002DUCUG2", "B00AEMHYXK", "B008TRSTQS", "B00EBXKO4O", "B00GPHQPYC", "B00GPHMC5S", "B00AEM0L94", "B002DUCU3U", "B00FXVZ9QQ", "B004CRTYIG", "B001B2KW4K", "B00GPHQQ64", "B00ELJ60N2", "B008TRSUGM", "B008OTS8NU", "B00BCG27MU", "B004FV67J8", "B00CGXW23W", "B00H9FN4YS", "B00FXVZ9D4", "B00GPHMCCG", "B004CRTYGS", "B00GPHMC8A", "B00GPHMDRA", "B00CGXW17E", "B00AEMHYW6", "B00AEM40BO", "B00AEMHY4E", "B00FWXG2FW", "B00GPHMCBC", "B007ZN5NUW", "B008FVXKO4", "B002S0ONDA", "B00CZ36PPO"],
-      "bought_together": ["B002Y273UC", "B00AEMHY2G", "B004CRTYEA", "B00H4Y6BJ4"]
-    },
-    "salesRank": {
-      "Clothing": 30507
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Women", "Clothing", "Jeans"],
-      ["Clothing, Shoes & Jewelry", "Women", "Petite", "Jeans"]
-    ]
-  }, {
-    "asin": "B000NWJP1A",
-    "title": "NYDJ Women's Petite Sarah Boot Leg Jean",
-    "price": 104.0,
-    "imUrl": "http://ecx.images-amazon.com/images/I/41QKXwOx8ZL._SX342_.jpg",
-    "related": {
-      "also_bought": ["B002Y273UC", "B00AEMHY2G", "B00H4Y6BJ4", "B004CRTYEA", "B002Y2744C", "B000NWOAN8", "B00CHIQT5S", "B008OTS8NU", "B00CZ36QG2", "B00CZ36OPA", "B004071YVS", "B00CZ36QIU", "B004CRTYEU", "B004CRTYFE", "B00H4Y6D3I", "B00GPHQREU", "B00HROQCRC", "B00FXVZF4W", "B005DPLYSO", "B00CZ36PPO", "B00CHIQT5I", "B00GPHQPYC", "B00B8MINIU", "B00DZL234C", "B00EBXKO4O", "B00D85Z3ZQ", "B002DUCVES", "B00FXVZESE", "B00AEMHY30", "B002DUCUG2", "B00AEMHYXK", "B0018QZX8Y"],
-      "also_viewed": ["B002Y273UC", "B004CRTYEA", "B002Y2744C", "B000NWOAN8", "B00AEMHY2G", "B004071YVS", "B00H4Y6BJ4", "B002DUCVES", "B00CZ36OPA", "B00AEMHY30", "B00CZ36QIU", "B004CRTYEU", "B002DUCV9S", "B00CHIQT5I", "B004CRTYFE", "B00B8MINIU", "B00CHIQT5S", "B00B8MINCG", "B00IR6WQ0G", "B00CZ36QG2", "B00H4Y6B6W", "B00GPHQREU", "B004CRTYJ0", "B00GPHQPY2", "B002DUCUG2", "B00AEMHYXK", "B008TRSTQS", "B00EBXKO4O", "B00GPHQPYC", "B00GPHMC5S", "B00AEM0L94", "B002DUCU3U", "B00FXVZ9QQ", "B004CRTYIG", "B001B2KW4K", "B00GPHQQ64", "B00ELJ60N2", "B008TRSUGM", "B008OTS8NU", "B00BCG27MU", "B004FV67J8", "B00CGXW23W", "B00H9FN4YS", "B00FXVZ9D4", "B00GPHMCCG", "B004CRTYGS", "B00GPHMC8A", "B00GPHMDRA", "B00CGXW17E", "B00AEMHYW6", "B00AEM40BO", "B00AEMHY4E", "B00FWXG2FW", "B00GPHMCBC", "B007ZN5NUW", "B008FVXKO4", "B002S0ONDA", "B00CZ36PPO"],
-      "bought_together": ["B002Y273UC", "B00AEMHY2G", "B004CRTYEA", "B00H4Y6BJ4"]
-    },
-    "salesRank": {
-      "Clothing": 30507
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Women", "Clothing", "Jeans"],
-      ["Clothing, Shoes & Jewelry", "Women", "Petite", "Jeans"]
-    ]
-  }, {
     "asin": "B000NWKPAU",
     "title": "NYDJ Women's Petite Sarah Boot Leg Jean",
     "price": 104.0,
@@ -7374,22 +7190,6 @@
       ["Clothing, Shoes & Jewelry", "Men", "Big & Tall"]
     ]
   }, {
-    "asin": "B000SBKEV6",
-    "title": "FDNY T-Shirt New York City Fire Department Embroidered Shield",
-    "price": 19.95,
-    "imUrl": "http://ecx.images-amazon.com/images/I/41HZsn62K8L._SX342_.jpg",
-    "related": {
-      "also_viewed": ["B0012ML3ZG", "B000STKNFU", "B000YOOPEY", "B007ZTXT0W", "B0089ODO3O", "B00AQI9JAS", "B000W9SK56", "B000FOL3IO", "B00AQIF5S8", "B005FGIKGA", "B008BC7M5A", "B003GK3R9W", "B000SEG07U"]
-    },
-    "salesRank": {
-      "Clothing": 440330
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Men"],
-      ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Shirts", "T-Shirts"],
-      ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Band & Music Fan", "T-Shirts"]
-    ]
-  }, {
     "asin": "B000SHOCZO",
     "title": "Penguin Power Basic Cotton Gym Workout Tee",
     "price": 15.99,
@@ -7902,21 +7702,6 @@
       ["Clothing, Shoes & Jewelry", "Men", "Clothing", "Shirts", "Dress Shirts"]
     ]
   }, {
-    "asin": "B000ULYU5K",
-    "title": "Glam Attack Women's Short Club Halter Dress",
-    "price": 37.99,
-    "imUrl": "http://ecx.images-amazon.com/images/I/31LxQsQ62eL._SY445_.jpg",
-    "related": {
-      "also_viewed": ["B00DQCEK32", "B0006HJ91S", "B000ULYUAK", "B00FN8D61Y", "B000UM2SX0", "B00664LMD8", "B00367T9T2", "B000UMCD6C", "B00664M7HS", "B00ECF32NQ", "B0098MOTAI", "B0049RBMCU", "B00FXZLJDE", "B003Y3BG6W", "B00KOEOF6W", "B00EPQM09O", "B003YE243K", "B00EPOEJJ0", "B00K6DJ1O2", "B005DNSQVY", "B00K72TL74", "B00EYPNWW0", "B009NVZUK2", "B00K361GQS", "B00B5MJBPC", "B00HAM7ILA", "B00KLYG400", "B00GN0CE8C", "B00KGUGM56", "B0087X7O9C", "B00FXZTH0Q", "B004AMOAVY", "B007EWNEFU", "B0057Z09XQ", "B00997L4QE", "B00EYPONWI", "B006S4PDU4", "B00K5NV8N0", "B00CH1NF66", "B00DNVA6BG", "B00J2Q0LAW", "B00ES83O12", "B000NPOK3U", "B00EYPMLN6", "B00KD6YJXU", "B001J2NR1M", "B00I9TCSQI", "B00EYPRA1O", "B0079MEDHS", "B00FF29HFW", "B0087X96UC", "B003YE2458", "B007CVK41K", "B0098T1LFW", "B00DWKIP20", "B00DQCALF8", "B002NVELRM", "B0006HJ92C", "B00ISYQG4O"],
-      "bought_together": ["B000UM2SX0", "B00DQCEK32", "B0006HJ91S", "B000ULYUAK"]
-    },
-    "salesRank": {
-      "Clothing": 310362
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Women", "Clothing", "Dresses", "Night Out & Cocktail"]
-    ]
-  }, {
     "asin": "B000UM0YLI",
     "title": "Glam Attack Women's Short Club Halter Dress",
     "price": 37.99,
@@ -8018,24 +7803,6 @@
     "categories": [
       ["Clothing, Shoes & Jewelry", "Men", "Clothing", "Suits & Sport Coats", "Vests"],
       ["Clothing, Shoes & Jewelry", "Men", "Big & Tall"]
-    ]
-  }, {
-    "asin": "B000URW2NG",
-    "title": "FDNY T-SHIRT, Officially Licensed Crewneck New York Fire Department Long-Sleeve Athletic Tee, Navy",
-    "price": 24.95,
-    "imUrl": "http://ecx.images-amazon.com/images/I/51GQasjYnHL._SX342_.jpg",
-    "related": {
-      "also_bought": ["B000YOOPEY", "B007WHBSHI", "B000STKNFU", "B007WN8M12", "B00AQHPL8S", "B000SWYQ2S", "B00AQII418", "B007WHBQHA", "B000XA8GKI", "B000WB4I64", "B008BC4YCE", "B000URW7P4", "B008AJHAAG", "B003GVS9CG", "B0002EJ4XS", "B007WMQPVC", "B005ZSU1T2"],
-      "also_viewed": ["B000YOOPEY", "B0012ML3ZG", "B000STKNFU", "B007WHBSHI", "B00AQIF5S8", "B00AQHL74U", "B00AQII418", "B007WN8M12", "B000P1PCY8", "B004H28Y3M", "B000SEG07U", "B0089ODO3O", "B000URW7P4", "B005FGIKGA", "B003G5KYQQ", "B000FOL3IO", "B007WMQPVC", "B008BC4YCE", "B003G3YY50", "B00AQHPL8S", "B00AQI9JAS", "B003GVS9CG", "B007WHBORW", "B000PGWQM4", "B005ZSU1T2", "B008BC7TQW", "B003G5LI4S", "B00A4HORPI", "B008AZMAYG", "B003G5M7DO", "B008BC7TDK", "B000WB4I64", "B000SWYQ2S", "B008964GRU", "B007YL4S6A", "B002T6VXEK", "B005G40078", "B006C80ZL8", "B000XA8GKI", "B00GT1V4KE", "B0043FQTKS", "B00H0FF7ZG", "B003GK3R9W", "B00ASN8QK0", "B008459WHK", "B008CJ5OS4", "B00ERAJ8ES", "B005GS03RQ", "B000SIK2OS", "B008BCBC10", "B007WHBQHA", "B007I97WY8", "B000W9SK56", "B0002EJ4XS", "B008BC6TKO", "B00FIL8MJW"],
-      "bought_together": ["B000STKNFU", "B007WHBSHI", "B007WN8M12"]
-    },
-    "salesRank": {
-      "Clothing": 331116
-    },
-    "categories": [
-      ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Women", "Tops & Tees", "T-Shirts"],
-      ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Novelty", "Clothing", "Men", "Shirts", "T-Shirts"],
-      ["Clothing, Shoes & Jewelry", "Novelty, Costumes & More", "Band & Music Fan", "T-Shirts"]
     ]
   }, {
     "asin": "B000URUHME",
