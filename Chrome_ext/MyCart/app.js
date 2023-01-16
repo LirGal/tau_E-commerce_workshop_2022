@@ -108,11 +108,15 @@ class UI {
     });
   }
 
-  sortBy(paremeter, selector, text) {
+  hideSimilaritiesAndDuplicates() {
     similarities.style.display = NONE;
     findSimilaritiesBtn.innerHTML = FIND_SIMILARITIES_TEXT;
     duplicates.style.display = NONE;
     findDuplicatesBtn.innerHTML = FIND_DUPLICATES_TEXT;
+  }
+
+  sortBy(paremeter, selector, text) {
+    this.hideSimilaritiesAndDuplicates();
 
     var sorted;
     this.resetAllSortByCheckboxes();
@@ -131,6 +135,8 @@ class UI {
   }
 
   filter(event, cart) {
+    this.hideSimilaritiesAndDuplicates();
+    
     var category = event.target.innerText;
     if(selectedCategories.has(category)) {
       selectedCategories.delete(category);
@@ -196,7 +202,19 @@ class UI {
     }
   }
 
+  unsortAndUnfilterCart(cart) {
+    this.resetAllSortByCheckboxes();
+    sortToggle = UNSELECTED;
+    selectedCategories = new Set();
+    this.boldAndUnboldCategoryCheckboxes();
+    filteredCart = cart;
+    this.setCartValues(filteredCart);
+    this.populateCart(filteredCart);
+  }
+
   findDuplicates(cart) {
+    this.unsortAndUnfilterCart(cart);
+
     similarities.style.display = NONE;
     findSimilaritiesBtn.innerHTML = FIND_SIMILARITIES_TEXT;
     if(duplicates.style.display == NONE) {
@@ -212,6 +230,8 @@ class UI {
   }
 
   findSimilarities(cart) {
+    this.unsortAndUnfilterCart(cart);
+
     duplicates.style.display = NONE;
     findDuplicatesBtn.innerHTML = FIND_DUPLICATES_TEXT;
     if(similarities.style.display == NONE) {
