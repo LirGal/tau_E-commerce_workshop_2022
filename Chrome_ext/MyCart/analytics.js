@@ -130,7 +130,7 @@ function union(set1, set2) {
     return intersection;
   }
 
-function similarityMeasure(str1, str2) {
+function jaccard(str1, str2) {
     str1 = removeSpecialCharacters(str1);
     str2 = removeSpecialCharacters(str2);
     str1 = str1.toLowerCase();
@@ -150,17 +150,27 @@ function findSimilarities(cartItems) {
     var groupIndex;
     for(var i = 0; i < cartItems.length; i++) {
         for(var j = i+1; j < cartItems.length; j++) {
-            similarity = similarityMeasure(cartItems[i][TITLE], cartItems[j][TITLE]);
+            similarity = jaccard(cartItems[i][TITLE].toLowerCase(), cartItems[j][TITLE].toLowerCase());
             if(similarity >= THRESHOLD) {
-                if(!(i in indexDictionary)) {
-                    indexDictionary[i] = groupsCounter;
+                if(!(i in indexDictionary) && !(j in indexDictionary)) {  // Check whether cartItems[i] and cartItems[j] already grouped
+                    groupIndex = groupsCounter;
                     groupsCounter++;
+                    indexDictionary[i] = groupIndex;
+                    indexDictionary[j] = groupIndex;
                     groupedSimilarities.push(new Set());
+                    groupedSimilarities[groupIndex].add(cartItems[i]);
+                    groupedSimilarities[groupIndex].add(cartItems[j]);
                 }
-                groupIndex = indexDictionary[i];
-                indexDictionary[j] = groupIndex;
-                groupedSimilarities[groupIndex].add(cartItems[i]);
-                groupedSimilarities[groupIndex].add(cartItems[j]);
+                else if(!(i in indexDictionary) && (j in indexDictionary)) {
+                    groupIndex = indexDictionary[j]
+                    indexDictionary[i] = groupIndex;
+                    groupedSimilarities[groupIndex].add(cartItems[i]);
+                }
+                else if((i in indexDictionary) && !(j in indexDictionary)) {
+                    groupIndex = indexDictionary[i]
+                    indexDictionary[j] = groupIndex;
+                    groupedSimilarities[groupIndex].add(cartItems[j]);
+                }
             }
         }
     }
