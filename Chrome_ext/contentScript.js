@@ -5,8 +5,13 @@ const CART_DICT = "CART_DICT";
 // initializing memory when first entering one of the websites.
 var CART_INIT = false;
 if ( !CART_INIT) {
-  chrome.storage.local.set({ CART_DICT: {} }, function(){});
-  CART_INIT = true;
+  chrome.storage.local.get(["CART_DICT"]).then((result) => {
+    console.log(result.CART_DICT);
+    if(!result.CART_DICT) {
+      chrome.storage.local.set({ CART_DICT: {} }, function(){});
+      CART_INIT = true;
+    }
+  });
 }
 
 
