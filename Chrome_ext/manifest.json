@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "description": "Recieves data from e-commerce sites and aggregates them into onr DB.",
     "permissions": ["storage", "tabs"],
-    "host_permissions": ["https://super-cart-shopping-1.netlify.app/", "https://super-cart-shopping-2.netlify.app/"],
+    "host_permissions": ["https://super-cart-shopping-site-1.netlify.app/", "https://super-cart-shopping-site-2.netlify.app/"],
     "icons": {
       "16": "Graphics/Shopping_Cart_Icon.png",
       "32": "Graphics/Shopping_Cart_Icon.png",
@@ -19,9 +19,8 @@
     "manifest_version": 3,
     "content_scripts": [
       {
-        "matches": ["https://super-cart-shopping-1.netlify.app/", "https://super-cart-shopping-2.netlify.app/"],
+        "matches": ["https://super-cart-shopping-site-1.netlify.app/", "https://super-cart-shopping-site-2.netlify.app/"],
         "js": ["contentScript.js"]
       }
     ]
 }
-
